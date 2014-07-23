@@ -6,7 +6,7 @@ require 'gratr/version'
 
 Gem::Specification.new do |s|
   #### Basic information.
-  s.name = 'gratr'
+  s.name = 'gratr19'
   s.version = GRATR::VERSION
   s.summary = "Graph Theory Ruby library"
 
@@ -51,6 +51,7 @@ EOF
   s.require_path = 'lib'                         # Use these for libraries.
 
   #### Documentation and testing.
+  s.has_rdoc = true
   s.extra_rdoc_files = ['README']
   s.rdoc_options <<
   '--title' <<  'GRATR - Ruby Graph Library' <<
@@ -58,9 +59,9 @@ EOF
   '--line-numbers'
 
   #### Author and project details.
-  s.author = "Shawn Garbett"
-  s.email = "shawn@garbett.org"
-  s.homepage = "http://gratr.rubyforge.org"
-  s.rubyforge_project = "gratr"
+  s.authors = ["Shawn Garbett","Ankur Sethi"]
+  s.email = ["shawn@garbett.org", "ankursethi108@gmail.com"]
+  s.homepage = "https://github.com/amalagaura/gratr"
+  s.rubyforge_project = "gratr19"
 end
 
