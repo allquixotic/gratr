@@ -1,14 +1,9 @@
 # Rakefile for GRATR        -*- ruby -*-
-begin
-  require 'rubygems'
-  require 'rake/gempackagetask'
-rescue Exception
-  nil
-end
-
+require 'rubygems'
+require 'rubygems/package_task'
 require 'rake/clean'
 require 'rake/testtask'
-require 'rake/rdoctask'
+require 'rdoc/task'
 
 SPEC = eval(File.read(File.join(File.dirname(__FILE__), 'gratr.gemspec')))
 
@@ -70,7 +65,7 @@ rd = Rake::RDocTask.new("rdoc") { |rdoc|
 if ! defined?(Gem)
   puts "Package Target requires RubyGEMs"
 else
-  Rake::GemPackageTask.new(SPEC) do |pkg|
+  Gem::PackageTask.new(SPEC) do |pkg|
     #pkg.need_zip = true
     pkg.need_tar = true
   end
